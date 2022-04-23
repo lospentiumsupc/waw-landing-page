@@ -1,8 +1,8 @@
 console.log("[main.js] Test main.js");
-setTimeout(function () {
+window.addEventListener("load",()=> {
 
     /* Image Slider - Swiper */
-    var imageSlider = new Swiper(".image-slider", {
+    const imageSlider = new Swiper(".image-slider", {
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -35,4 +35,4 @@ setTimeout(function () {
     });
 
 
-},500);
+});
