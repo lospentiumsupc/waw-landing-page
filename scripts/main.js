@@ -1,8 +1,8 @@
 console.log("[main.js] Test main.js");
-window.addEventListener("load",()=> {
 
+window.addEventListener("load", () => {
     /* Image Slider - Swiper */
-    const imageSlider = new Swiper(".image-slider", {
+    new Swiper(".image-slider", {
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -33,6 +33,4 @@ window.addEventListener("load",()=> {
             },
         },
     });
-
-
 });

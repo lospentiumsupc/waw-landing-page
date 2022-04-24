@@ -1,3 +1,5 @@
+/* Override Bootstrap theme */
+/* DO NOT REMOVE */
 :root {
   --bs-font-sans-serif: 'Roboto', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -10,7 +12,6 @@
 .text-grey {
   color: #e11212;
 }
-
 
 .slider-1 {
   padding-top: 2rem;
@@ -52,16 +53,12 @@
   -o-transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
-.swiper-container-android .swiper-slide, .swiper-wrapper {
-  transform: translate3d(0px, 0, 0);
-}
 
 .swiper-container-android .swiper-slide, .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
 }
+
 img, svg {
   vertical-align: middle;
 }
-
-
-
