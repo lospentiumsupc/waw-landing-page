@@ -230,69 +230,6 @@ body {
 
 
 
-.btn {
-  display: inline-block;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #616368;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.56rem 0.8rem;
-  font-size: 1rem;
-  border-radius: 0.313rem;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #333652;
-  border-color: #fad02c;
-}
-
-.btn-lg, .btn-group-lg > .btn {
-  padding: 0.6rem 1.8rem;
-  font-size: 1rem;
-  border-radius: 0.625rem;
-}
-
-.btn-sm, .btn-group-sm > .btn {
-  padding: 0.1rem 0.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.625rem;
-}
-
-.btn-link:disabled, .btn-link.disabled {
-  color: #C3C1C8;
-}
-
-.btn-link:focus {
-  text-decoration: underline;
-}
-
-.btn-link {
-  font-weight: 400;
-  color: #fad02c;
-  text-decoration: none;
-}
-
-.btn-link:hover {
-  color: #90adc6;
-  text-decoration: underline;
-}
-
-.btn-link:focus {
-  text-decoration: underline;
-}
 
 #myBtn {
   position: fixed;
