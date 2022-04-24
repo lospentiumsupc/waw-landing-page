@@ -1,31 +1,16 @@
-/* Override Bootstrap theme */
-:root {
-  --bs-font-sans-serif: 'Roboto', system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-
-div {
-  display: block;
-}
-
 /********************/
 /*    Customers     */
 /********************/
 
-.blue {
-  color: #00cec9;
+.text-grey {
+  color: #e11212;
 }
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  display: block;
-}
+
 
 .slider-1 {
   padding-top: 2rem;
   padding-bottom: 3.75rem;
-  background: linear-gradient(rgb(238, 238, 238), rgb(144, 173, 198));
+  background: #eeeeee;
   text-align: center;
 }
 
@@ -69,30 +54,9 @@ div {
 .swiper-container-android .swiper-slide, .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
 }
-
-.row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x)/ -2);
-  margin-left: calc(var(--bs-gutter-x)/ -2);
-}
-
 img, svg {
   vertical-align: middle;
 }
 
 
 
-/* Min-width 1200px */
-@media (min-width: 1200px) {
-
-  /* General Styles */
-  .container {
-    max-width: 1140px;
-  }
-
-  /* end of general styles */
-}
