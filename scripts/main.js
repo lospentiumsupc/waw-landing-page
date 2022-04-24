@@ -59,8 +59,8 @@ window.addEventListener("load", () => {
 // When the user scrolls down 20px from the top of the document, show the button
     function scrollFunctionBTT() {
         if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
+            document.body.scrollTop > 10 ||
+            document.documentElement.scrollTop > 10
         ) {
             myButton.style.display = "block";
         } else {
