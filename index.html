@@ -45,7 +45,7 @@
           </li>
         </ul>
         <div class="d-flex">
-          <button class="btn btn-outline-primary" onclick="location.href='http://waw-frontend-vue.dalbitresb.com/account/signin';">Log in</button>
+          <a id="login-button" class="btn btn-outline-primary">Log in</a>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
         <div class="fs-4 fw px-2 py-1 mb-3 text-center">
           Publish your job offers and find the best software professionals
         </div>
-        <button class="btn btn-primary" onclick="location.href='http://waw-frontend-vue.dalbitresb.com/account/signup';">Join now for free</button>
+        <a id="signup-button" class="btn btn-primary">Join now for free</a>
       </div>
     </div>
     <div class="w-full md:w-1/2">
@@ -75,7 +75,7 @@
   <section id="about-us" class="p-3 my-4">
     <div class="row align-items-center justify-content-between">
       <div class="col-12 col-lg-6 mb-6 mb-lg-0">
-        <img class="img-fluid rounded-3" src="/img/waw.png" alt="Group's photo">
+        <img id="group-img" class="img-fluid rounded-3" alt="Group's photo">
       </div>
       <div class="col-12 col-lg-6 col-xl-5">
         <div>
@@ -264,26 +264,52 @@
         <div class="py-4">
           <h3>About the team</h3>
         </div>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
         </iframe>
       </div>
       <div id="about-the-product" class="d-flex flex-column align-items-center">
         <div class="py-4">
           <h3>About the product</h3>
         </div>
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-        </iframe> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </section>
 
   <!-- Scripts always are the last items before closing the body tag -->
+  <script>
+    const getType = () => {
+      const hostname = window.location.hostname;
+      if (hostname.startsWith("landing-web") || hostname.includes("vue")) return "vue";
+      if (hostname.startsWith("landing-os") || hostname.includes("angular")) return "angular";
+      return "unknown";
+    }
+
+    const getFrontendUrl = (path = "/") => {
+      const type = getType();
+      if (type === "vue") return new URL(path, "https://vue.wawupc.ga");
+      if (type === "angular") return new URL(path, "https://angular.wawupc.ga");
+      return new URL(path, "https://www.wawupc.ga");
+    };
+
+    const getImageUrl = () => {
+      const type = getType();
+      if (type === "vue") return "/img/waw-web.png";
+      if (type === "angular") return "/img/waw-os.png";
+      return "/img/main-page.jpg";
+    };
+
+    document.getElementById("login-button").setAttribute("href", getFrontendUrl("/account/signin").toString());
+    document.getElementById("signup-button").setAttribute("href", getFrontendUrl("/account/signup").toString());
+    document.getElementById("group-img").setAttribute("src", getImageUrl());
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
