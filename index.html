@@ -264,7 +264,7 @@
         <div class="py-4">
           <h3>About the team</h3>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9DJuUxJC-8M" title="YouTube video player"
+        <iframe id="video-about-team" width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -274,7 +274,7 @@
         <div class="py-4">
           <h3>About the product</h3>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
+        <iframe id="video-about-product" width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
@@ -291,24 +291,30 @@
       if (hostname.startsWith("landing-os") || hostname.includes("angular")) return "angular";
       return "unknown";
     }
-
+    const type = getType();
     const getFrontendUrl = (path = "/") => {
-      const type = getType();
       if (type === "vue") return new URL(path, "https://vue.wawupc.ga");
       if (type === "angular") return new URL(path, "https://angular.wawupc.ga");
       return new URL(path, "https://www.wawupc.ga");
     };
-
+    const getTeamVideoId = () => {
+      if (type === "vue") return "9DJuUxJC-8M";
+      return "KcVo6hQy4Wc";
+    };
+    const getProductVideoId = () => {
+      if (type === "vue") return "kuPsqaLIRxs";
+      return "KcVo6hQy4Wc";
+    };
     const getImageUrl = () => {
-      const type = getType();
       if (type === "vue") return "/img/waw-web.png";
       if (type === "angular") return "/img/waw-os.png";
       return "/img/main-page.jpg";
     };
-
     document.getElementById("login-button").setAttribute("href", getFrontendUrl("/account/signin").toString());
     document.getElementById("signup-button").setAttribute("href", getFrontendUrl("/account/signup").toString());
     document.getElementById("group-img").setAttribute("src", getImageUrl());
+    document.getElementById("video-about-team").setAttribute("src", `https://www.youtube.com/embed/${getTeamVideoId()}`);
+    document.getElementById("video-about-product").setAttribute("src", `https://www.youtube.com/embed/${getProductVideoId()}`);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
