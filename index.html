@@ -260,25 +260,35 @@
   </section>
   <section id="videos" class="py-4">
     <div class="d-flex flex-column justify-content-center align-items-center">
-      <div id="about-the-team" class="d-flex flex-column align-items-center">
-        <div class="py-4">
+      <div id="about-the-team" class="w-100 d-flex flex-column align-items-center px-3">
+        <div class="my-4">
           <h3>About the team</h3>
         </div>
-        <iframe id="video-about-team" width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="responsive-video">
+          <iframe
+            id="video-about-team"
+            src="https://www.youtube.com/embed/KcVo6hQy4Wc"
+            title="About-the-Team video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-      <div id="about-the-product" class="d-flex flex-column align-items-center">
-        <div class="py-4">
+      <div id="about-the-product" class="w-100 d-flex flex-column align-items-center px-3">
+        <div class="my-4">
           <h3>About the product</h3>
         </div>
-        <iframe id="video-about-product" width="560" height="315" src="https://www.youtube.com/embed/KcVo6hQy4Wc" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="responsive-video">
+          <iframe
+            id="video-about-product"
+            src="https://www.youtube.com/embed/KcVo6hQy4Wc"
+            title="About-the-Product video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -298,11 +308,13 @@
       return new URL(path, "https://www.wawupc.ga");
     };
     const getTeamVideoId = () => {
-      if (type === "vue") return "9DJuUxJC-8M";
+      if (type === "vue") return "kuPsqaLIRxs";
+      if (type === "angular") return "iBUjinTSi6I";
       return "KcVo6hQy4Wc";
     };
     const getProductVideoId = () => {
-      if (type === "vue") return "kuPsqaLIRxs";
+      if (type === "vue") return "9DJuUxJC-8M";
+      if (type === "angular") return "2DOFK3y4BTo";
       return "KcVo6hQy4Wc";
     };
     const getImageUrl = () => {
